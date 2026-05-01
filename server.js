@@ -4,8 +4,8 @@ const MongoClient = require("mongodb").MongoClient;
 
 const PORT = 5050;
 
-// ✅ Use correct Mongo credentials (from Docker)
-const MONGO_URL = "mongodb://admin:vishal@localhost:27017";
+// ✅ Use environment variable for Mongo URL (defaults to localhost for manual runs)
+const MONGO_URL = process.env.MONGO_URL || "mongodb://admin:vishal@localhost:27017";
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));

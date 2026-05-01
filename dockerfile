@@ -1,13 +1,17 @@
-FROM node
+FROM node:18-alpine
 
-ENV MONGO_DB_USERNAME=admin/
-    MONGO_DB_PWD=vishal
+WORKDIR /app
 
-RUN mkdir -p testapp
+COPY package*.json ./
+RUN npm install
 
-COPY . /docker-testapp
+COPY . .
 
-CMD ["node" , "/docker-testapp/server.js"]
+ENV MONGO_URL=mongodb://admin:vishal@mongo:27017
+
+EXPOSE 5050
+
+CMD ["node", "server.js"]
 
 
 
