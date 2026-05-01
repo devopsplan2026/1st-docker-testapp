@@ -1,6 +1,13 @@
 # docker-testapp
 
 
+
+docker-compose up --build
+
+# backed UI : http://localhost:8081/
+
+# Frontend UI : http://localhost:5050/
+
 sudo apt install nodejs
 
 node server.js
