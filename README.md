@@ -35,7 +35,7 @@ docker run -d \
 
   ----------
 
-Start the application : node server.js
+Start the application to run : node server.js
 
 
   localhost:5050/getUser
