@@ -10,9 +10,7 @@ docker-compose up --build
 
 sudo apt install nodejs
 
-node server.js
-
------------------------------------
+----------------------------------
 
 docker network create mongo-network
 
@@ -35,8 +33,9 @@ docker run -d \
   -e ME_CONFIG_MONGODB_URL="mongodb://admin:vishal@mongo:27017" \
   mongo-express
 
-
   ----------
+
+Start the application : node server.js
 
 
   localhost:5050/getUser
